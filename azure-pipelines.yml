@@ -10,9 +10,7 @@ steps:
     versionSpec: '3.6'
 - script: python3 -m pip install --upgrade pip setuptools wheel
   displayName: 'Install tools'
-- script: python3 -m pip install bpytop
-  displayName: 'Install bpytop'
 - script: system_profiler SPHardwareDataType
   displayName: 'Info'
-- script: python3 -m bpytop
-  displayName: 'bpytop'
+- script: df -h
+  displayName: 'disk'
