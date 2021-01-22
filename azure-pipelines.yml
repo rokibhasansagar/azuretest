@@ -11,6 +11,6 @@ steps:
 - script: python3 -m pip install --upgrade pip setuptools wheel
   displayName: 'Install tools'
 - script: python3 -m pip install bpytop
-  displayName: 'Info'
+  displayName: 'Install bpytop'
 - script: python3 -m bpytop
   displayName: 'bpytop'
