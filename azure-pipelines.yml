@@ -12,5 +12,7 @@ steps:
   displayName: 'Install tools'
 - script: python3 -m pip install bpytop
   displayName: 'Install bpytop'
+- script: system_profiler SPHardwareDataType
+  displayName: 'Info'
 - script: python3 -m bpytop
   displayName: 'bpytop'
