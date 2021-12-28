@@ -1,22 +1,13 @@
 trigger:
 - main
 
-strategy:
-  matrix:
-    linux:
-      imageName: "ubuntu-latest"
-    mac:
-      imageName: "macOS-latest"
-  maxParallel: 2
-
 pool:
-  vmImage: $(imageName)
+  vmImage: "ubuntu-latest"
+
+container: ubuntu:21.04
 
 steps:
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '3.9'
-- script: python3 -m pip install --upgrade pip setuptools wheel
-  displayName: 'Install tools'
+- script: printenv
+  displayName: 'envs'
 - script: df -h
   displayName: 'disk'
