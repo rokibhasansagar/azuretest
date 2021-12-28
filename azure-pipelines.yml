@@ -7,7 +7,9 @@ pool:
 container: ubuntu:21.04
 
 steps:
-- script: printenv
-  displayName: 'envs'
+- script: cat /etc/os-release
+  displayName: 'os'
+- script: apt list --installed
+  displayName: 'apt list'
 - script: df -h
   displayName: 'disk'
