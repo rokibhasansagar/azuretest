@@ -4,7 +4,7 @@ trigger:
 pool:
   vmImage: "ubuntu-latest"
 
-container: buildpack-deps:jammy
+# container: buildpack-deps:jammy
 
 steps:
 - script: cat /etc/os-release
@@ -15,3 +15,5 @@ steps:
   displayName: 'disk'
 - script: cat /proc/cpuinfo
   displayName: 'cpuinfo'
+- script: curl -sL "https://github.com/rokibhasansagar/slimhub_actions/raw/main/cleanup.sh" | bash
+  displayName: 'SLIMHUB'
