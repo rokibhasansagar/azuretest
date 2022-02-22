@@ -4,7 +4,7 @@ trigger:
 pool:
   vmImage: "ubuntu-latest"
 
-container: ubuntu:21.04
+container: buildpack-deps:jammy
 
 steps:
 - script: cat /etc/os-release
@@ -13,3 +13,5 @@ steps:
   displayName: 'apt list'
 - script: df -h
   displayName: 'disk'
+- script: cat /proc/cpuinfo
+  displayName: 'cpuinfo'
