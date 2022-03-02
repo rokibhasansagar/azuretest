@@ -7,6 +7,8 @@ pool:
 # container: buildpack-deps:jammy
 
 steps:
+- script: whoami
+  displayName: 'whoami'
 - script: cat /etc/os-release
   displayName: 'os'
 - script: apt list --installed
